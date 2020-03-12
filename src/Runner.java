@@ -68,7 +68,8 @@ public class Runner {
 	}
 */
 //*************** Doubly Linked List
-	DoublyLinkedList dlist= new DoublyLinkedList();
+/*
+		DoublyLinkedList dlist= new DoublyLinkedList();
 	
 	dlist.insert(10);
 	dlist.insert(20);
@@ -82,6 +83,6 @@ public class Runner {
 	dlist.show();
 	dlist.insertLast(50);
 	dlist.show();
-
+*/
 	}
 }

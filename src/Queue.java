@@ -12,10 +12,18 @@ public class Queue {
 		
 	}
 	
+	public int dequeue() {
+		int data = queue[front];
+		front++;
+		size--;
+		return data;
+	}
+	
 	public void show() {
-		int i;
-		for (i = 0; i<size; i++) {
-			
+		
+		for (int i = 0; i<size; i++) {
+			System.out.print(queue[front + i]+" ");
 		}
+		System.out.println("");
 	}
 }

@@ -56,9 +56,32 @@ public class Runner {
 		System.out.println("");
 		list.show();
 */
-	
-		
+//**************Queue
+/*
+	Queue q = new Queue();
+	q.enqueue(5);
+	q.enqueue(10);
+	q.enqueue(20);
+	q.show();
+	q.dequeue();
+	q.show();
 	}
+*/
+//*************** Doubly Linked List
+	DoublyLinkedList dlist= new DoublyLinkedList();
 	
+	dlist.insert(10);
+	dlist.insert(20);
+	dlist.insert(30);
+	dlist.insert(40);
+	//dlist.deleteAt(3);
+	dlist.deleteFirst();
+	dlist.show();
+	dlist.insertAt(10, 0);
+	dlist.insertFirst(5);
+	dlist.show();
+	dlist.insertLast(50);
+	dlist.show();
 
+	}
 }

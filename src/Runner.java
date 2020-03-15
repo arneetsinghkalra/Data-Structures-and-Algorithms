@@ -87,6 +87,7 @@ public class Runner {
 //****************** Binary Search Tree
 		BST tree = new BST();
 		
+		
 		tree.insert(10);
 		tree.insert(5);
 		tree.insert(6);
@@ -107,6 +108,5 @@ public class Runner {
 		System.out.println();
 		System.out.println(tree.containsValue(30)); //Should be true
 		System.out.println(tree.containsValue(31)); //Should be false
-		
 	}
 }

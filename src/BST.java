@@ -1,3 +1,5 @@
+import java.util.LinkedList;
+
 /**
  * Binary Trees
  * @author arneetkalra
@@ -9,7 +11,6 @@ public class BST {
 	 public void insert(int value) {
 		 root = addRecursive(root,value);
 	 }
-	 
 	 private Tnode addRecursive(Tnode current, int data) {
 		 if (current == null) {
 			 return new Tnode(data);
@@ -26,11 +27,28 @@ public class BST {
 			 //Value already exists
 			 return current;
 		 }
-		
 		 return current;
-		 
 	 }
-
+	 
+	 public boolean containsValue(int value) {
+		 return containsValueRecursive(root, value);
+	 }
+	 private boolean containsValueRecursive(Tnode current, int data) {
+		if (current == null) {
+			return false;
+		}
+		if (current.data == data) {
+			return true;
+		}
+		if (data < current.data) {
+			return containsValueRecursive(current.left, data);
+		}
+		else {
+			return containsValueRecursive(current.right, data);
+		}
+		
+	}
+//************************************ TREE TRAVERSAL
 	public static void preorderTraversal(BST tree) {
 		System.out.print("The preorder traversal of this tree is: ");
 		preorder(tree.root);
@@ -66,5 +84,33 @@ public class BST {
 			inorder(root.right);
 		}
 	}
+	
+	/*
+	public void traverseLevelOrder() {
+	    if (root == null) {
+	        return;
+	    }
+	 
+	    Queue<Node> nodes = new LinkedList<>();
+	    nodes.add(root);
+	 
+	    while (!nodes.isEmpty()) {
+	 
+	        Node node = nodes.remove();
+	 
+	        System.out.print(" " + node.value);
+	 
+	        if (node.left != null) {
+	            nodes.add(node.left);
+	        }
+	 
+	        if (node.right!= null) {
+	            nodes.add(node.right);
+	        }
+	    }
+	}
+	*/
+//********************************************************************
+	
 	
 }

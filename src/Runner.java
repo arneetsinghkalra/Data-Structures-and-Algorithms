@@ -103,5 +103,10 @@ public class Runner {
 		tree.postorderTraversal(tree);
 		System.out.println();
 		tree.inorderTraversal(tree);
+		
+		System.out.println();
+		System.out.println(tree.containsValue(30)); //Should be true
+		System.out.println(tree.containsValue(31)); //Should be false
+		
 	}
 }

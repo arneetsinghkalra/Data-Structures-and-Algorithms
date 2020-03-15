@@ -84,5 +84,24 @@ public class Runner {
 	dlist.insertLast(50);
 	dlist.show();
 */
+//****************** Binary Search Tree
+		BST tree = new BST();
+		
+		tree.insert(10);
+		tree.insert(5);
+		tree.insert(6);
+		tree.insert(20);
+		tree.insert(18);
+		tree.insert(19);
+		tree.insert(1);
+		tree.insert(3);
+		tree.insert(30);
+
+		//System.out.println(tree.root.right.data);
+		tree.preorderTraversal(tree);
+		System.out.println();
+		tree.postorderTraversal(tree);
+		System.out.println();
+		tree.inorderTraversal(tree);
 	}
 }

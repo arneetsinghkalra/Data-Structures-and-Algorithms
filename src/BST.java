@@ -30,6 +30,32 @@ public class BST {
 		 return current;
 	 }
 	 
+	 public void delete(int value) {
+		 
+	 }
+	 private void deleteRecursive(Tnode current,int data) {
+		 if (current == null) {
+			 System.out.println("Node not found");
+		 }
+		 
+		 if (data < current.data) {
+			 if(current.left == null) {
+				 System.out.println("Node not found");
+			 }
+			 else {
+				 deleteRecursive(current.left,data);
+			 }
+		 }
+		 else if (data > current.data) {
+			 if(current.right == null) {
+				 System.out.println("Node not found");
+			 }
+			 else {
+				 deleteRecursive(current.right,data);
+			 }
+		 }
+	 }
+	 
 	 public boolean containsValue(int value) {
 		 return containsValueRecursive(root, value);
 	 }

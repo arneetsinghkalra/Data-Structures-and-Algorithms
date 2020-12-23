@@ -1,3 +1,4 @@
+import java.util.HashMap;
 
 public class Runner {
 
@@ -112,6 +113,16 @@ public class Runner {
 		System.out.println(tree.containsValue(31)); //Should be false
 	}
 	*/
+//********************* Hashmaps
+		HashMap<String, Integer> map = new HashMap<String, Integer>();
 		
+		map.put("Arneet", 145);
+		map.put("Bob", 2131);
+		map.put("Jerry", 1125);
+		
+		System.out.println(map);
+		
+		System.out.println(map.containsKey("Arneet"));
+		System.out.println(map.containsValue(2131));
 	}
 }
